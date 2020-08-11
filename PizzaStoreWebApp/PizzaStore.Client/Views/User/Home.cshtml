@@ -1,0 +1,20 @@
+@* @model PizzaBox.Client.Models.UserViewModel *@
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Welcome @ViewBag.User.Name</h1>
+<br>
+<form action="/order/orders" method="post">
+    <input type="hidden" name="name" id="name" value="@ViewBag.User.Name">
+    <input type="hidden" name="location" id="location" value="@ViewBag.Location">
+
+    <button type="submit">View Orders</button>
+</form>
+<br>
+<form action="/order/addpizza">
+    <button type="submit">Create Order</button>
+        <input type="hidden" name="name" id="name" value="@ViewBag.Name">
+        <input type="hidden" name="location" id="location" value="@ViewBag.Location">
+</form>

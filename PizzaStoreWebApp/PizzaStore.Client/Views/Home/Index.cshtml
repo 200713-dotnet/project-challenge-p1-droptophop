@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <br>
+    @* <p>Choose a store</p>
+    <br>
+    <form action="/user/login">
+        @foreach(var store in @ViewBag.Stores)
+        {
+            <option value="@store.Name">@store.Name</option>
+        }
+        <button type="submit">Enter</button>
+    </form> *@
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

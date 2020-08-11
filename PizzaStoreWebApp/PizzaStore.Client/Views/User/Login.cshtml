@@ -1,0 +1,14 @@
+@* @model PizzaBox.Client.Models.UserViewModel *@
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>User Login</h1>
+<br>
+<form action="/Order/Orders">
+    <label for="username">Username</label>
+    <input type="text" name="name" id="name">
+    <br>
+    <button type="submit">Login</button>
+</form>

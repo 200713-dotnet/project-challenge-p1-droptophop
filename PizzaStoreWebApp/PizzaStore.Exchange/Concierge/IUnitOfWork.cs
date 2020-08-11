@@ -1,0 +1,17 @@
+using System;
+using PizzaStore.Storing.Factories;
+
+namespace PizzaStore.Exchange.Concierge
+{
+    public interface IUnitOfWork : IDisposable
+    {
+        IPizzaFactory Pizzas { get; }
+        ISizeFactory Sizes { get; }
+        ICrustFactory Crusts { get; }
+        IToppingFactory Toppings { get; }
+        IMenuFactory MenuItems { get; }
+        IStoreFactory Stores { get; }
+        IUserFactory Users { get; }
+        int Complete();
+    }
+}
